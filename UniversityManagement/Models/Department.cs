@@ -13,8 +13,8 @@ namespace UniversityManagement.Models
         [Required(ErrorMessage = "You Must Fill Department Code Field")]
         [Index(IsUnique = true)]
         [MaxLength(32)]
-        // [StringLength(7, ErrorMessage = "The {0} must be at least {2} characters long and less then 8 characters.", MinimumLength = 2)]
-        [Remote("DoesCodeNameExist", "Departments", HttpMethod = "POST", ErrorMessage = "Error")]
+         [StringLength(7, ErrorMessage = "The {0} must be at least {2} characters long and less then 8 characters.", MinimumLength = 2)]
+        [Remote("DoesCodeNameExist", "Departments", HttpMethod = "POST", ErrorMessage = "Department Code exist")]
 
         public string DepartmentCode { get; set; }
 
